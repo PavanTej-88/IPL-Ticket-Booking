@@ -1,139 +1,170 @@
-/* IPL Ticket Booking - CSS Styling */
+/* =====================================
+   IPL TICKET BOOKING - CSS STYLING
+   ===================================== */
 
-/* Theme Colors */
+
+/* 1. THEME COLORS */
+
 :root {
-    --primary: #0b1f4d;
-    --accent: #f5c518;
-    --background: #f4f6f9;
-    --text: #222222;
-    --white: #ffffff;
+    --primary-color: #0b1f3a;
+    --accent-color: #f5b400;
+    --background-color: #f4f6f9;
+    --text-color: #222222;
+    --white-color: #ffffff;
 }
 
-/* General Styling */
+
+/* 2. GENERAL STYLING */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-/* Navigation Bar */
+
+/* 3. NAVIGATION BAR */
+
 nav {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 15px 30px;
+
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+
     z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav h2 {
-    color: var(--accent);
+    color: var(--accent-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
 }
 
 nav a {
-    color: var(--white);
+    color: var(--white-color);
     text-decoration: none;
-    margin-left: 20px;
     font-weight: bold;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: var(--accent);
+    color: var(--accent-color);
 }
 
-/* Hero Banner */
-header {
-    background: linear-gradient(135deg, #0b1f4d, #174ea6);
-    color: var(--white);
+
+/* 4. HERO / BANNER SECTION */
+
+#home {
+    background: linear-gradient(
+        135deg,
+        #0b1f3a,
+        #174ea6
+    );
+
+    color: var(--white-color);
     text-align: center;
-    padding: 140px 20px 80px;
+
+    padding: 160px 20px 100px;
 }
 
-header h1 {
-    font-size: 40px;
+#home h1 {
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
-header p {
+#home p {
     font-size: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-/* Buttons */
-button,
-.btn {
-    background-color: var(--accent);
-    color: var(--primary);
+#home a {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+
     padding: 12px 25px;
-    border: none;
+    margin: 8px;
+
     border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
     text-decoration: none;
+    font-weight: bold;
+
     transition: 0.3s;
 }
 
-button:hover,
-.btn:hover {
-    background-color: #e0ae00;
-    transform: translateY(-2px);
+#home a:hover {
+    background-color: var(--white-color);
+    transform: translateY(-3px);
 }
 
-/* Main Content */
-main {
-    padding: 30px;
-}
+
+/* 5. MAIN CONTENT SECTIONS */
 
 section {
-    margin: 30px 0;
+    margin: 35px auto;
+    padding: 30px;
+    max-width: 1200px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 section h2 {
-    color: var(--primary);
+    color: var(--primary-color);
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* Match Cards */
-.card {
-    background-color: var(--white);
-    padding: 20px;
-    margin: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+section h3 {
+    color: var(--primary-color);
+    margin: 20px 0 10px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+#about ul {
+    padding-left: 30px;
+    margin-bottom: 15px;
 }
 
-/* Tables */
+
+/* 6. TABLE STYLING */
+
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--white);
+
+    background-color: var(--white-color);
     margin: 20px 0;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 th {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 15px;
 }
 
@@ -147,14 +178,65 @@ tr:hover {
     background-color: #fff8d6;
 }
 
-/* Booking Forms */
+td a {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+
+    padding: 6px 14px;
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/* 7. BUTTONS */
+
+button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transform: translateY(-2px);
+}
+
+
+/* 8. BOOKING FORM */
+
 form {
-    background-color: var(--white);
+    background-color: var(--white-color);
+
     padding: 25px;
     max-width: 600px;
     margin: 20px auto;
+
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
 }
 
 input,
@@ -162,9 +244,11 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 6px 0;
+
     border: 1px solid #cccccc;
     border-radius: 5px;
+
     font-size: 15px;
 }
 
@@ -172,38 +256,118 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--primary);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(11, 31, 58, 0.2);
 }
 
-/* Footer */
+form button {
+    margin-top: 15px;
+}
+
+
+/* 9. BOOKING SUMMARY */
+
+#booking-summary {
+    background-color: var(--white-color);
+
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#booking-summary h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+#booking-summary h4 {
+    color: var(--primary-color);
+    margin-top: 15px;
+}
+
+
+/* 10. STADIUM GUIDELINES */
+
+#guidelines div {
+    background-color: var(--background-color);
+
+    padding: 18px;
+    margin: 15px 0;
+
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+#guidelines h3 {
+    margin-top: 0;
+}
+
+
+/* 11. FOOTER */
+
 footer {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+
     margin-top: 40px;
 }
 
-/* Responsive Design */
+
+/* 12. RESPONSIVE DESIGN */
+
 @media (max-width: 768px) {
+
     nav {
         flex-direction: column;
         gap: 10px;
+        padding: 12px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 
     nav a {
-        margin: 5px;
+        font-size: 14px;
     }
 
-    header h1 {
+    #home {
+        padding: 170px 15px 70px;
+    }
+
+    #home h1 {
         font-size: 28px;
     }
 
-    main {
-        padding: 15px;
+    #home p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 18px;
+        margin: 20px 10px;
     }
 
     table {
-        font-size: 14px;
+        font-size: 12px;
     }
-}   
+
+    th,
+    td {
+        padding: 8px 5px;
+    }
+
+    #booking-summary {
+        margin: 20px 10px;
+    }
+}
